@@ -1,10 +1,10 @@
 # The ANSI-Project
 Make quick ANSI formats to beautify terminal output
 
-`Version: 1.0`
+Version: `1.0`
 
 
-## See also for:
+## Look for:
 [`C/C++`](https://bruneo32.github.io/ANSI-Project/C)
 [`C#`](https://bruneo32.github.io/ANSI-Project/CS)
 [`Java`](https://bruneo32.github.io/ANSI-Project/Java)
