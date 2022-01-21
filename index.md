@@ -1,7 +1,12 @@
 # The ANSI-Project
 Make quick ANSI formats to beautify terminal output
 
-`C/C++` `C#` `Java` `Python`
+See for:
+
+[`C/C++`](https://bruneo32.github.io/ANSI-Project/C)
+[`C#`](https://bruneo32.github.io/ANSI-Project/CS)
+[`Java`](https://bruneo32.github.io/ANSI-Project/Java)
+[`Python`](https://bruneo32.github.io/ANSI-Project/Python)
 
 `Version: 1.0`
 
