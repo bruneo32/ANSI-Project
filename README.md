@@ -5,9 +5,11 @@ Make quick ANSI formats to beautify terminal output
 
 
 ***WebPage: [bruneo32.github.io/ANSI-Project](https://bruneo32.github.io/ANSI-Project)***
-![logo](resources/logo.png)
 
 ***Doc Generated with: [Doxygen](https://www.doxygen.nl/index.html)*** (Except for *Java*)
+
+
+![logo](resources/logo.png)
 ![doxygen](resources/doxygen.png)
 
 
@@ -22,6 +24,6 @@ REG ADD HKCU\CONSOLE /f /v VirtualTerminalLevel /t REG_DWORD /d 1 >nul
 ## Outputs
 ANSI interpretation depends on terminal support, so somethings may be different between terminals
 
-![output](exoutput.png)
-![output](exoutput2.png)
-![output](exoutput3.png)
+![output](resources/exoutput.png)
+![output](resources/exoutput2.png)
+![output](resources/exoutput3.png)
