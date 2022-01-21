@@ -1,14 +1,14 @@
 # The ANSI-Project
 Make quick ANSI formats to beautify terminal output
 
-See for:
+`Version: 1.0`
 
+
+## See also for:
 [`C/C++`](https://bruneo32.github.io/ANSI-Project/C)
 [`C#`](https://bruneo32.github.io/ANSI-Project/CS)
 [`Java`](https://bruneo32.github.io/ANSI-Project/Java)
 [`Python`](https://bruneo32.github.io/ANSI-Project/Python)
-
-`Version: 1.0`
 
 
 ***WebPage: [bruneo32.github.io/ANSI-Project](https://bruneo32.github.io/ANSI-Project)***
@@ -16,16 +16,16 @@ See for:
 ***Doc Generated with: [Doxygen](https://www.doxygen.nl/index.html)*** (Except for *Java*)
 
 
-[![logo](resources/logo.png)](https://bruneo32.github.io/ANSI-Project)
-[![doxygen](resources/doxygen.png)](https://www.doxygen.nl/index.html)
+[![logo](assets/logo.png)](https://bruneo32.github.io/ANSI-Project)
+[![doxygen](assets/doxygen.png)](https://www.doxygen.nl/index.html)
 
 
 ## Outputs
 ANSI interpretation depends on terminal support, so somethings may be different between terminals
 
-![output](resources/exoutput.png)
-![output](resources/exoutput2.png)
-![output](resources/exoutput3.png)
+![output](assets/exoutput.png)
+![output](assets/exoutput2.png)
+![output](assets/exoutput3.png)
 
 
 ### Windows 10
