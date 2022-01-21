@@ -3,7 +3,6 @@ theme: jekyll-theme-architect
 url: http://bruneo32.github.io/ANSI-Project
 subtitle: Make quick ANSI formats to beautify terminal output
 author: Bruno Castro Garcia
-simple_search: http://google.com/search
 description: Make quick ANSI formats to beautify terminal output
 email: bruneo32b@gmail.com
-avatar: "/resources/logo.png"
+title-img: "/resources/logo.png"
