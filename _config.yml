@@ -1,2 +1,10 @@
 theme: jekyll-theme-hacker
-tab-size: 4
+
+url: http://bruneo32.github.io/ANSI-Project
+title: Traversing the Internets
+subtitle: Make quick ANSI formats to beautify terminal output
+author: Bruno Castro Garcia
+simple_search: http://google.com/search
+description: Make quick ANSI formats to beautify terminal output
+email: bruneo32b@gmail.com
+avatar: "/resources/logo.png"
