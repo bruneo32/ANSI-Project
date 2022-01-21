@@ -1,6 +1,8 @@
 # The ANSI-Project
 Make quick ANSI formats to beautify terminal output
+
 `C/C++` `C#` `Java` `Python`
+
 `Version: 1.0`
 
 
@@ -9,7 +11,7 @@ Make quick ANSI formats to beautify terminal output
 ***Doc Generated with: [Doxygen](https://www.doxygen.nl/index.html)*** (Except for *Java*)
 
 
-[![logo](resources/logo.png)](bruneo32.github.io/ANSI-Project)
+[![logo](resources/logo.png)](https://bruneo32.github.io/ANSI-Project)
 [![doxygen](resources/doxygen.png)](https://www.doxygen.nl/index.html)
 
 
