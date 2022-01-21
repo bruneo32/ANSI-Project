@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# The ANSI-Project
+Make quick ANSI formats to beautify terminal output
 
-You can use the [editor on GitHub](https://github.com/bruneo32/ANSI-Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+`C/C++` `C#` `Java` `Python`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+`Version: 1.0`
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+***WebPage: [bruneo32.github.io/ANSI-Project](https://bruneo32.github.io/ANSI-Project)***
 
-```markdown
-Syntax highlighted code block
+***Doc Generated with: [Doxygen](https://www.doxygen.nl/index.html)*** (Except for *Java*)
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+[![logo](resources/logo.png)](https://bruneo32.github.io/ANSI-Project)
+[![doxygen](resources/doxygen.png)](https://www.doxygen.nl/index.html)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Outputs
+ANSI interpretation depends on terminal support, so somethings may be different between terminals
 
-[Link](url) and ![Image](src)
+![output](resources/exoutput.png)
+![output](resources/exoutput2.png)
+![output](resources/exoutput3.png)
+
+
+### Windows 10
+Starting with Windows 10, the console supports ANSI escape sequences, but only if the console is configured to NOT "use legacy console", and the program writing to the console must configure its output to interpret the sequences.
+
+You can execute this command and restart the **cmd** to fix it
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bruneo32/ANSI-Project/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+REG ADD HKCU\CONSOLE /f /v VirtualTerminalLevel /t REG_DWORD /d 1 >nul
+```
