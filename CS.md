@@ -54,7 +54,7 @@ namespace Example
 			}
 
 
-			Console.Write(ANSI.RESET); // Always RESET at end
+			Console.WriteLine(ANSI.RESET); // Always RESET at end
 
 		}
 	}
