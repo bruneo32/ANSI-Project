@@ -35,3 +35,9 @@ You can execute this command and restart the **cmd** to fix it
 ```
 REG ADD HKCU\CONSOLE /f /v VirtualTerminalLevel /t REG_DWORD /d 1 >nul
 ```
+
+# Contact
+If you publish any project that use the ANSI-Project, *FEEL FREE TO NOTICE ME!*
+
+I would love see your project:
+[bruneo32b@gmail.com](mailto:bruneo32b@gmail.com)
