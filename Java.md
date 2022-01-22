@@ -17,7 +17,7 @@ Your IDE console may not display ANSI characters. Known in *Eclipse IDE* you nee
 Don't know for NetBeans or any other.
 
 # Documentation
-Check out the [**documentation** of the ANSI-Project for ***Java***](https://github.com/bruneo32/ANSI-Project/blob/main/Java/EclipseWorkspace/ANSI/doc/index.html)
+Check out the [**documentation** of the ANSI-Project for ***Java***](https://bruneo32.github.io/ANSI-Project/doc/java/index.html)
 
 # Quick Example
 ```java
