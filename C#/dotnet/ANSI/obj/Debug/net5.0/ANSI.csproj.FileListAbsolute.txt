@@ -1,0 +1,16 @@
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.exe
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.deps.json
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.runtimeconfig.json
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.runtimeconfig.dev.json
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.dll
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ref\ANSI.dll
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\bin\Debug\net5.0\ANSI.pdb
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.dll
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ref\ANSI.dll
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.pdb
+C:\Users\Usuario\Desktop\fiu\ANSI-Project\C#\dotnet\ANSI\obj\Debug\net5.0\ANSI.genruntimeconfig.cache
