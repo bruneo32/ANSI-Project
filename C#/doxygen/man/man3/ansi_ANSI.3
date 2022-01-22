@@ -1,0 +1,867 @@
+.TH "ansi.ANSI" 3 "Sat Jan 22 2022" "Version 1.0" "ANSI-Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ansi.ANSI
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBSGR\fP (string str)"
+.br
+.ti -1c
+.RI "static string \fBRGB\fP (int r, int g, int b)"
+.br
+.ti -1c
+.RI "static string \fBBK_RGB\fP (int r, int g, int b)"
+.br
+.ti -1c
+.RI "static string \fBCUU\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCUD\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCUF\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCUB\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCNL\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCPL\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCHA\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBCUP\fP (int row, int col)"
+.br
+.ti -1c
+.RI "static string \fBED\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBEL\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBSU\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBSD\fP (int n)"
+.br
+.ti -1c
+.RI "static string \fBHVP\fP (int row, int col)"
+.br
+.ti -1c
+.RI "static string \fBcustom\fP (string str)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static string \fBESC\fP = '\\u001B'"
+.br
+.ti -1c
+.RI "static string \fBCSI\fP = '\\u009B'"
+.br
+.ti -1c
+.RI "static string \fBDSC\fP = '\\u0090'"
+.br
+.ti -1c
+.RI "static string \fBOSC\fP = '\\u009D'"
+.br
+.ti -1c
+.RI "static string \fBRESET\fP = \fBESC\fP+'[0m'"
+.br
+.ti -1c
+.RI "static string \fBBOLD\fP = \fBESC\fP+'[1m'"
+.br
+.ti -1c
+.RI "static string \fBFAINT\fP = \fBESC\fP+'[2m'"
+.br
+.ti -1c
+.RI "static string \fBITALIC\fP = \fBESC\fP+'[3m'"
+.br
+.ti -1c
+.RI "static string \fBUNDER\fP = \fBESC\fP+'[4m'"
+.br
+.ti -1c
+.RI "static string \fBSBLINK\fP = \fBESC\fP+'[5m'"
+.br
+.ti -1c
+.RI "static string \fBRBLINK\fP = \fBESC\fP+'[6m'"
+.br
+.ti -1c
+.RI "static string \fBREVERSE\fP = \fBESC\fP+'[7m'"
+.br
+.ti -1c
+.RI "static string \fBHIDE\fP = \fBESC\fP+'[8m'"
+.br
+.ti -1c
+.RI "static string \fBSTRIKE\fP = \fBESC\fP+'[9m'"
+.br
+.ti -1c
+.RI "static string \fBDEF_FONT\fP = \fBESC\fP+'[10m'"
+.br
+.ti -1c
+.RI "static string \fBFranktur\fP = \fBESC\fP+'[20m'"
+.br
+.ti -1c
+.RI "static string \fBBOLD_OFF\fP = \fBESC\fP+'[21m'"
+.br
+.ti -1c
+.RI "static string \fBHI_OFF\fP = \fBESC\fP+'[22m'"
+.br
+.ti -1c
+.RI "static string \fBITALIC_OFF\fP = \fBESC\fP+'[23m'"
+.br
+.ti -1c
+.RI "static string \fBUNDER_OFF\fP = \fBESC\fP+'[24m'"
+.br
+.ti -1c
+.RI "static string \fBBLINK_OFF\fP = \fBESC\fP+'[25m'"
+.br
+.ti -1c
+.RI "static string \fBREVERSE_OFF\fP = \fBESC\fP+'[27m'"
+.br
+.ti -1c
+.RI "static string \fBREVEAL\fP = \fBESC\fP+'[28m'"
+.br
+.ti -1c
+.RI "static string \fBSTRIKE_OFF\fP = \fBESC\fP+'[29m'"
+.br
+.ti -1c
+.RI "static string \fBBLACK\fP = \fBESC\fP+'[30m'"
+.br
+.ti -1c
+.RI "static string \fBRED\fP = \fBESC\fP+'[31m'"
+.br
+.ti -1c
+.RI "static string \fBGREEN\fP = \fBESC\fP+'[32m'"
+.br
+.ti -1c
+.RI "static string \fBYELLOW\fP = \fBESC\fP+'[33m'"
+.br
+.ti -1c
+.RI "static string \fBBLUE\fP = \fBESC\fP+'[34m'"
+.br
+.ti -1c
+.RI "static string \fBPURPLE\fP = \fBESC\fP+'[35m'"
+.br
+.ti -1c
+.RI "static string \fBCYAN\fP = \fBESC\fP+'[36m'"
+.br
+.ti -1c
+.RI "static string \fBWHITE\fP = \fBESC\fP+'[37m'"
+.br
+.ti -1c
+.RI "static string \fBDEFAULT\fP = \fBESC\fP+'[39m'"
+.br
+.ti -1c
+.RI "static string \fBBK_BLACK\fP = \fBESC\fP+'[40m'"
+.br
+.ti -1c
+.RI "static string \fBBK_RED\fP = \fBESC\fP+'[41m'"
+.br
+.ti -1c
+.RI "static string \fBBK_GREEN\fP = \fBESC\fP+'[42m'"
+.br
+.ti -1c
+.RI "static string \fBBK_YELLOW\fP = \fBESC\fP+'[43m'"
+.br
+.ti -1c
+.RI "static string \fBBK_BLUE\fP = \fBESC\fP+'[44m'"
+.br
+.ti -1c
+.RI "static string \fBBK_PURPLE\fP = \fBESC\fP+'[45m'"
+.br
+.ti -1c
+.RI "static string \fBBK_CYAN\fP = \fBESC\fP+'[46m'"
+.br
+.ti -1c
+.RI "static string \fBBK_WHITE\fP = \fBESC\fP+'[47m'"
+.br
+.ti -1c
+.RI "static string \fBBK_DEFAULT\fP = \fBESC\fP+'[49m'"
+.br
+.ti -1c
+.RI "static string \fBBLACK_HI\fP = \fBESC\fP+'[90m'"
+.br
+.ti -1c
+.RI "static string \fBRED_HI\fP = \fBESC\fP+'[91m'"
+.br
+.ti -1c
+.RI "static string \fBGREEN_HI\fP = \fBESC\fP+'[92m'"
+.br
+.ti -1c
+.RI "static string \fBYELLOW_HI\fP = \fBESC\fP+'[93m'"
+.br
+.ti -1c
+.RI "static string \fBBLUE_HI\fP = \fBESC\fP+'[94m'"
+.br
+.ti -1c
+.RI "static string \fBPURPLE_HI\fP = \fBESC\fP+'[95m'"
+.br
+.ti -1c
+.RI "static string \fBCYAN_HI\fP = \fBESC\fP+'[96m'"
+.br
+.ti -1c
+.RI "static string \fBWHITE_HI\fP = \fBESC\fP+'[97m'"
+.br
+.ti -1c
+.RI "static string \fBBK_BLACK_HI\fP = \fBESC\fP+'[100m'"
+.br
+.ti -1c
+.RI "static string \fBBK_RED_HI\fP = \fBESC\fP+'[101m'"
+.br
+.ti -1c
+.RI "static string \fBBK_GREEN_HI\fP = \fBESC\fP+'[102m'"
+.br
+.ti -1c
+.RI "static string \fBBK_YELLOW_HI\fP = \fBESC\fP+'[103m'"
+.br
+.ti -1c
+.RI "static string \fBBK_BLUE_HI\fP = \fBESC\fP+'[104m'"
+.br
+.ti -1c
+.RI "static string \fBBK_PURPLE_HI\fP = \fBESC\fP+'[105m'"
+.br
+.ti -1c
+.RI "static string \fBBK_CYAN_HI\fP = \fBESC\fP+'[106m'"
+.br
+.ti -1c
+.RI "static string \fBBK_WHITE_HI\fP = \fBESC\fP+'[107m'"
+.br
+.ti -1c
+.RI "static string \fBC0\fP = \fBESC\fP+'[1;1H'"
+.br
+.ti -1c
+.RI "static string \fBCUU1\fP = \fBESC\fP+'[1A'"
+.br
+.ti -1c
+.RI "static string \fBCUD1\fP = \fBESC\fP+'[1B'"
+.br
+.ti -1c
+.RI "static string \fBCUF1\fP = \fBESC\fP+'[1C'"
+.br
+.ti -1c
+.RI "static string \fBCUB1\fP = \fBESC\fP+'[1D'"
+.br
+.ti -1c
+.RI "static string \fBCNL1\fP = \fBESC\fP+'[1E'"
+.br
+.ti -1c
+.RI "static string \fBCPL1\fP = \fBESC\fP+'[1F'"
+.br
+.ti -1c
+.RI "static string \fBSU1\fP = \fBESC\fP+'[1S'"
+.br
+.ti -1c
+.RI "static string \fBSD1\fP = \fBESC\fP+'[1T'"
+.br
+.ti -1c
+.RI "static string \fBED0\fP = \fBESC\fP+'[0J'"
+.br
+.ti -1c
+.RI "static string \fBED1\fP = \fBESC\fP+'[1J'"
+.br
+.ti -1c
+.RI "static string \fBED2\fP = \fBESC\fP+'[2J'"
+.br
+.ti -1c
+.RI "static string \fBED3\fP = \fBESC\fP+'[3J'"
+.br
+.ti -1c
+.RI "static string \fBEL0\fP = \fBESC\fP+'[0K'"
+.br
+.ti -1c
+.RI "static string \fBEL1\fP = \fBESC\fP+'[1K'"
+.br
+.ti -1c
+.RI "static string \fBEL2\fP = \fBESC\fP+'[2K'"
+.br
+.ti -1c
+.RI "static string \fBAUX_PORT_ON\fP = \fBESC\fP+'[5i'"
+.br
+.ti -1c
+.RI "static string \fBAUX_PORT_OFF\fP = \fBESC\fP+'[4i'"
+.br
+.ti -1c
+.RI "static string \fBDSR\fP = \fBESC\fP+'[6n'"
+.br
+.ti -1c
+.RI "static string \fBSCP\fP = \fBESC\fP+'[s'"
+.br
+.ti -1c
+.RI "static string \fBRCP\fP = \fBESC\fP+'[u'"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static string ansi\&.ANSI\&.BK_RGB (int r, int g, int b)\fC [static]\fP"
+Specify the Background color in RGB
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red value 
+.br
+\fIg\fP Green value 
+.br
+\fIb\fP Blue value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CHA (int n)\fC [static]\fP"
+Moves the cursor to column n (default 1)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CNL (int n)\fC [static]\fP"
+Moves cursor to beginning of the line n (default 1) lines down\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CPL (int n)\fC [static]\fP"
+Moves cursor to beginning of the line n (default 1) lines up\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CUB (int n)\fC [static]\fP"
+Moves the cursor n (default 1) cells backwards
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CUD (int n)\fC [static]\fP"
+Moves the cursor n (default 1) cells down
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CUF (int n)\fC [static]\fP"
+Moves the cursor n (default 1) cells forwards
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CUP (int row, int col)\fC [static]\fP"
+Moves the cursor to [row, column]\&. The values are 1-based\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP 
+.br
+\fIcol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.custom (string str)\fC [static]\fP"
+Returns a custom \fBANSI\fP ESCAPE SEQUENCE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ESC + '[' + str 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.CUU (int n)\fC [static]\fP"
+Moves the cursor n (default 1) cells up
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.ED (int n)\fC [static]\fP"
+Clears part of the screen\&. If n is 0 (or missing), clear from cursor to end of screen\&. If n is 1, clear from cursor to beginning of the screen\&. If n is 2, clear entire screen (and moves cursor to upper left on DOS ANSI\&.SYS)\&. If n is 3, clear entire screen and delete all lines saved in the scrollback buffer (this feature was added for xterm and is supported by other terminal applications)\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.EL (int n)\fC [static]\fP"
+Erases part of the line If n is 0 (or missing), clear from cursor to the end of the line If n is 1, clear from cursor to beginning of the line If n is 2, clear entire line\&. Cursor position does not change\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.HVP (int row, int col)\fC [static]\fP"
+Same as CUP, but counts as a format effector function (like CR or LF) rather than an editor function (like CUD or CNL) This can lead to different handling in certain terminal modes
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP 
+.br
+\fIcol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.RGB (int r, int g, int b)\fC [static]\fP"
+Specify the Foreground color in RGB
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red value 
+.br
+\fIg\fP Green value 
+.br
+\fIb\fP Blue value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.SD (int n)\fC [static]\fP"
+Scroll whole page down by n (default 1) lines\&. New lines are added at the top\&. (not ANSI\&.SYS)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.SGR (string str)\fC [static]\fP"
+Sets colors and style of the characters following this code Example: \fBANSI\&.SGR\fP('40;91') makes RED_HI over BK_BLACK
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SS "static string ansi\&.ANSI\&.SU (int n)\fC [static]\fP"
+Scroll whole page up by n (default 1) lines\&. New lines are added at the bottom\&. (not ANSI\&.SYS)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string to be printed 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "string ansi\&.ANSI\&.AUX_PORT_OFF = \fBESC\fP+'[4i'\fC [static]\fP"
+Enable aux serial port usually for local serial printer
+.PP
+\fBReturns\fP
+.RS 4
+ESC [4i 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.AUX_PORT_ON = \fBESC\fP+'[5i'\fC [static]\fP"
+Enable aux serial port usually for local serial printer
+.PP
+\fBReturns\fP
+.RS 4
+ESC [5i 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.BK_BLACK = \fBESC\fP+'[40m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_BLACK_HI = \fBESC\fP+'[100m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_BLUE = \fBESC\fP+'[44m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_BLUE_HI = \fBESC\fP+'[104m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_CYAN = \fBESC\fP+'[46m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_CYAN_HI = \fBESC\fP+'[106m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_DEFAULT = \fBESC\fP+'[49m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_GREEN = \fBESC\fP+'[42m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_GREEN_HI = \fBESC\fP+'[102m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_PURPLE = \fBESC\fP+'[45m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_PURPLE_HI = \fBESC\fP+'[105m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_RED = \fBESC\fP+'[41m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_RED_HI = \fBESC\fP+'[101m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_WHITE = \fBESC\fP+'[47m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_WHITE_HI = \fBESC\fP+'[107m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_YELLOW = \fBESC\fP+'[43m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BK_YELLOW_HI = \fBESC\fP+'[103m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BLACK = \fBESC\fP+'[30m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BLACK_HI = \fBESC\fP+'[90m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BLINK_OFF = \fBESC\fP+'[25m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BLUE = \fBESC\fP+'[34m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BLUE_HI = \fBESC\fP+'[94m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BOLD = \fBESC\fP+'[1m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.BOLD_OFF = \fBESC\fP+'[21m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.C0 = \fBESC\fP+'[1;1H'\fC [static]\fP"
+Place the cursor in top-left corner Same as CUP(1,1)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1;1H 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CNL1 = \fBESC\fP+'[1E'\fC [static]\fP"
+Moves cursor to beginning of the next line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1E 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CPL1 = \fBESC\fP+'[1F'\fC [static]\fP"
+Moves cursor to beginning of the previous line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1F 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CSI = '\\u009B'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.CUB1 = \fBESC\fP+'[1D'\fC [static]\fP"
+Move the cursor 1 cell backwards
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1D 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CUD1 = \fBESC\fP+'[1B'\fC [static]\fP"
+Move the cursor 1 row down
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1B 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CUF1 = \fBESC\fP+'[1C'\fC [static]\fP"
+Move the cursor 1 cell forwards
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1C 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CUU1 = \fBESC\fP+'[1A'\fC [static]\fP"
+Move the cursor 1 row up
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1A 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.CYAN = \fBESC\fP+'[36m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.CYAN_HI = \fBESC\fP+'[96m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.DEF_FONT = \fBESC\fP+'[10m'\fC [static]\fP"
+Default font 
+.SS "string ansi\&.ANSI\&.DEFAULT = \fBESC\fP+'[39m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.DSC = '\\u0090'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.DSR = \fBESC\fP+'[6n'\fC [static]\fP"
+Reports the cursor position (CPR) by transmitting ESC[n;mR, where n is the row and m is the column\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [6n 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.ED0 = \fBESC\fP+'[0J'\fC [static]\fP"
+Clear from cursor to end of screen\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [0J 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.ED1 = \fBESC\fP+'[1J'\fC [static]\fP"
+Clear from cursor to beginning of the screen
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1J 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.ED2 = \fBESC\fP+'[2J'\fC [static]\fP"
+Clear entire screen (and moves cursor to upper left on DOS ANSI\&.SYS)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [2J 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.ED3 = \fBESC\fP+'[3J'\fC [static]\fP"
+Clear entire screen and delete all lines saved in the scrollback buffer (this feature was added for xterm and is supported by other terminal applications)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [3J 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.EL0 = \fBESC\fP+'[0K'\fC [static]\fP"
+Clear from cursor to the end of the line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [0K 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.EL1 = \fBESC\fP+'[1K'\fC [static]\fP"
+Clear from cursor to beginning of the line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1K 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.EL2 = \fBESC\fP+'[2K'\fC [static]\fP"
+Clear entire line\&. Cursor position does not change\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [2K 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.ESC = '\\u001B'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.FAINT = \fBESC\fP+'[2m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.Franktur = \fBESC\fP+'[20m'\fC [static]\fP"
+Rarely supported font 
+.SS "string ansi\&.ANSI\&.GREEN = \fBESC\fP+'[32m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.GREEN_HI = \fBESC\fP+'[92m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.HI_OFF = \fBESC\fP+'[22m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.HIDE = \fBESC\fP+'[8m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.ITALIC = \fBESC\fP+'[3m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.ITALIC_OFF = \fBESC\fP+'[23m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.OSC = '\\u009D'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.PURPLE = \fBESC\fP+'[35m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.PURPLE_HI = \fBESC\fP+'[95m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.RBLINK = \fBESC\fP+'[6m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.RCP = \fBESC\fP+'[u'\fC [static]\fP"
+Restores the cursor position/state in SCO console mode\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [u 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.RED = \fBESC\fP+'[31m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.RED_HI = \fBESC\fP+'[91m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.RESET = \fBESC\fP+'[0m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.REVEAL = \fBESC\fP+'[28m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.REVERSE = \fBESC\fP+'[7m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.REVERSE_OFF = \fBESC\fP+'[27m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.SBLINK = \fBESC\fP+'[5m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.SCP = \fBESC\fP+'[s'\fC [static]\fP"
+Saves the cursor position/state in SCO console mode In vertical split screen mode, instead used to set (as CSI n ; n s) or reset left and right margins\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [s 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.SD1 = \fBESC\fP+'[1T'\fC [static]\fP"
+Scroll whole page down by 1 line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1T 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.STRIKE = \fBESC\fP+'[9m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.STRIKE_OFF = \fBESC\fP+'[29m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.SU1 = \fBESC\fP+'[1S'\fC [static]\fP"
+Scroll whole page up by 1 line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1S 
+.RE
+.PP
+
+.SS "string ansi\&.ANSI\&.UNDER = \fBESC\fP+'[4m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.UNDER_OFF = \fBESC\fP+'[24m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.WHITE = \fBESC\fP+'[37m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.WHITE_HI = \fBESC\fP+'[97m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.YELLOW = \fBESC\fP+'[33m'\fC [static]\fP"
+
+.SS "string ansi\&.ANSI\&.YELLOW_HI = \fBESC\fP+'[93m'\fC [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ANSI-Project from the source code\&.
