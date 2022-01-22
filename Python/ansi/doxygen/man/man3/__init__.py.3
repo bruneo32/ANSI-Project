@@ -1,0 +1,354 @@
+.TH "__init__.py" 3 "Sat Jan 22 2022" "Version 1.0" "ANSI-Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__init__.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBansi\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBansi\&.SGR\fP (str)"
+.br
+.RI "Sets colors and style of the characters following this code Example: \fBansi\&.SGR\fP('4091') makes RED_HI over BK_BLACK\&. "
+.ti -1c
+.RI "def \fBansi\&.RGB\fP (r, g, b)"
+.br
+.RI "Specify the Foreground color in RGB\&. "
+.ti -1c
+.RI "def \fBansi\&.BK_RGB\fP (r, g, b)"
+.br
+.RI "Specify the Background color in RGB\&. "
+.ti -1c
+.RI "def \fBansi\&.CUU\fP (n)"
+.br
+.RI "Moves the cursor n (default 1) cells up\&. "
+.ti -1c
+.RI "def \fBansi\&.CUD\fP (n)"
+.br
+.RI "Moves the cursor n (default 1) cells down\&. "
+.ti -1c
+.RI "def \fBansi\&.CUF\fP (n)"
+.br
+.RI "Moves the cursor n (default 1) cells forwards\&. "
+.ti -1c
+.RI "def \fBansi\&.CUB\fP (n)"
+.br
+.RI "Moves the cursor n (default 1) cells backwards\&. "
+.ti -1c
+.RI "def \fBansi\&.CNL\fP (n)"
+.br
+.RI "Moves cursor to beginning of the line n (default 1) lines down\&. "
+.ti -1c
+.RI "def \fBansi\&.CPL\fP (n)"
+.br
+.RI "Moves cursor to beginning of the line n (default 1) lines up\&. "
+.ti -1c
+.RI "def \fBansi\&.CHA\fP (n)"
+.br
+.RI "Moves the cursor to column n (default 1) "
+.ti -1c
+.RI "def \fBansi\&.CUP\fP (row, col)"
+.br
+.RI "Moves the cursor to [row, column]\&. "
+.ti -1c
+.RI "def \fBansi\&.ED\fP (n)"
+.br
+.RI "Clears part of the screen\&. "
+.ti -1c
+.RI "def \fBansi\&.EL\fP (n)"
+.br
+.RI "Erases part of the line If n is 0 (or missing), clear from cursor to the end of the line If n is 1, clear from cursor to beginning of the line If n is 2, clear entire line\&. "
+.ti -1c
+.RI "def \fBansi\&.SU\fP (n)"
+.br
+.RI "Scroll whole page up by n (default 1) lines\&. "
+.ti -1c
+.RI "def \fBansi\&.SD\fP (n)"
+.br
+.RI "Scroll whole page down by n (default 1) lines\&. "
+.ti -1c
+.RI "def \fBansi\&.HVP\fP (row, col)"
+.br
+.RI "Same as CUP, but counts as a format effector function (like CR or LF) rather than an editor function (like CUD or CNL) This can lead to different handling in certain terminal modes\&. "
+.ti -1c
+.RI "def \fBansi\&.custom\fP (str)"
+.br
+.RI "Returns a custom ANSI ESCAPE SEQUENCE\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "string \fBansi\&.ESC\fP = '\\u001B'"
+.br
+.ti -1c
+.RI "string \fBansi\&.CSI\fP = '\\u009B'"
+.br
+.ti -1c
+.RI "string \fBansi\&.DSC\fP = '\\u0090'"
+.br
+.ti -1c
+.RI "string \fBansi\&.OSC\fP = '\\u009D'"
+.br
+.ti -1c
+.RI "string \fBansi\&.RESET\fP = ESC+'[0m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BOLD\fP = ESC+'[1m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.FAINT\fP = ESC+'[2m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.ITALIC\fP = ESC+'[3m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.UNDER\fP = ESC+'[4m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.SBLINK\fP = ESC+'[5m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.RBLINK\fP = ESC+'[6m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.REVERSE\fP = ESC+'[7m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.HIDE\fP = ESC+'[8m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.STRIKE\fP = ESC+'[9m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.DEF_FONT\fP = ESC+'[10m'"
+.br
+.RI "Default font\&. "
+.ti -1c
+.RI "string \fBansi\&.Franktur\fP = ESC+'[20m'"
+.br
+.RI "Rarely supported font\&. "
+.ti -1c
+.RI "string \fBansi\&.BOLD_OFF\fP = ESC+'[21m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.HI_OFF\fP = ESC+'[22m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.ITALIC_OFF\fP = ESC+'[23m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.UNDER_OFF\fP = ESC+'[24m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BLINK_OFF\fP = ESC+'[25m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.REVERSE_OFF\fP = ESC+'[27m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.REVEAL\fP = ESC+'[28m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.STRIKE_OFF\fP = ESC+'[29m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BLACK\fP = ESC+'[30m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.RED\fP = ESC+'[31m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.GREEN\fP = ESC+'[32m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.YELLOW\fP = ESC+'[33m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BLUE\fP = ESC+'[34m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.PURPLE\fP = ESC+'[35m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.CYAN\fP = ESC+'[36m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.WHITE\fP = ESC+'[37m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.DEFAULT\fP = ESC+'[39m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_BLACK\fP = ESC+'[40m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_RED\fP = ESC+'[41m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_GREEN\fP = ESC+'[42m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_YELLOW\fP = ESC+'[43m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_BLUE\fP = ESC+'[44m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_PURPLE\fP = ESC+'[45m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_CYAN\fP = ESC+'[46m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_WHITE\fP = ESC+'[47m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_DEFAULT\fP = ESC+'[49m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BLACK_HI\fP = ESC+'[90m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.RED_HI\fP = ESC+'[91m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.GREEN_HI\fP = ESC+'[92m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.YELLOW_HI\fP = ESC+'[93m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BLUE_HI\fP = ESC+'[94m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.PURPLE_HI\fP = ESC+'[95m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.CYAN_HI\fP = ESC+'[96m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.WHITE_HI\fP = ESC+'[97m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_BLACK_HI\fP = ESC+'[100m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_RED_HI\fP = ESC+'[101m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_GREEN_HI\fP = ESC+'[102m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_YELLOW_HI\fP = ESC+'[103m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_BLUE_HI\fP = ESC+'[104m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_PURPLE_HI\fP = ESC+'[105m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_CYAN_HI\fP = ESC+'[106m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.BK_WHITE_HI\fP = ESC+'[107m'"
+.br
+.ti -1c
+.RI "string \fBansi\&.C0\fP = ESC+'[11H'"
+.br
+.RI "Place the cursor in top-left corner Same as CUP(1,1) "
+.ti -1c
+.RI "string \fBansi\&.CUU1\fP = ESC+'[1A'"
+.br
+.RI "Move the cursor 1 row up\&. "
+.ti -1c
+.RI "string \fBansi\&.CUD1\fP = ESC+'[1B'"
+.br
+.RI "Move the cursor 1 row down\&. "
+.ti -1c
+.RI "string \fBansi\&.CUF1\fP = ESC+'[1C'"
+.br
+.RI "Move the cursor 1 cell forwards\&. "
+.ti -1c
+.RI "string \fBansi\&.CUB1\fP = ESC+'[1D'"
+.br
+.RI "Move the cursor 1 cell backwards\&. "
+.ti -1c
+.RI "string \fBansi\&.CNL1\fP = ESC+'[1E'"
+.br
+.RI "Moves cursor to beginning of the next line\&. "
+.ti -1c
+.RI "string \fBansi\&.CPL1\fP = ESC+'[1F'"
+.br
+.RI "Moves cursor to beginning of the previous line\&. "
+.ti -1c
+.RI "string \fBansi\&.SU1\fP = ESC+'[1S'"
+.br
+.RI "Scroll whole page up by 1 line\&. "
+.ti -1c
+.RI "string \fBansi\&.SD1\fP = ESC+'[1T'"
+.br
+.RI "Scroll whole page down by 1 line\&. "
+.ti -1c
+.RI "string \fBansi\&.ED0\fP = ESC+'[0J'"
+.br
+.RI "Clear from cursor to end of screen\&. "
+.ti -1c
+.RI "string \fBansi\&.ED1\fP = ESC+'[1J'"
+.br
+.RI "Clear from cursor to beginning of the screen\&. "
+.ti -1c
+.RI "string \fBansi\&.ED2\fP = ESC+'[2J'"
+.br
+.RI "Clear entire screen (and moves cursor to upper left on DOS ANSI\&.SYS) "
+.ti -1c
+.RI "string \fBansi\&.ED3\fP = ESC+'[3J'"
+.br
+.RI "Clear entire screen and delete all lines saved in the scrollback buffer (this feature was added for xterm and is supported by other terminal applications) "
+.ti -1c
+.RI "string \fBansi\&.EL0\fP = ESC+'[0K'"
+.br
+.RI "Clear from cursor to the end of the line\&. "
+.ti -1c
+.RI "string \fBansi\&.EL1\fP = ESC+'[1K'"
+.br
+.RI "Clear from cursor to beginning of the line\&. "
+.ti -1c
+.RI "string \fBansi\&.EL2\fP = ESC+'[2K'"
+.br
+.RI "Clear entire line\&. "
+.ti -1c
+.RI "string \fBansi\&.AUX_PORT_ON\fP = ESC+'[5i'"
+.br
+.RI "Enable aux serial port usually for local serial printer\&. "
+.ti -1c
+.RI "string \fBansi\&.AUX_PORT_OFF\fP = ESC+'[4i'"
+.br
+.RI "Enable aux serial port usually for local serial printer\&. "
+.ti -1c
+.RI "string \fBansi\&.DSR\fP = ESC+'[6n'"
+.br
+.RI "Reports the cursor position (CPR) by transmitting ESC[nmR, where n is the row and m is the column\&. "
+.ti -1c
+.RI "string \fBansi\&.SCP\fP = ESC+'[s'"
+.br
+.RI "Saves the cursor position/state in SCO console mode In vertical split screen mode, instead used to set (as CSI n n s) or reset left and right margins\&. "
+.ti -1c
+.RI "string \fBansi\&.RCP\fP = ESC+'[u'"
+.br
+.RI "Restores the cursor position/state in SCO console mode\&. "
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ANSI-Project from the source code\&.
