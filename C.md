@@ -5,11 +5,14 @@ Make quick ANSI formats to beautify terminal output
 
 
 # Installation
-Download [ansi.h](TODO) and include it in your NASM program:
+Download [ansi.h](https://github.com/bruneo32/ANSI-Project/blob/main/C/ansi.h) and include it in your NASM program:
 ```c
 #include "ansi.h"
 ```
 It only contains macros, you can include it in `C++` without `extern`
+
+# Documentation
+Check out the [**documentation** of the ANSI-Project for ***C/C++***](https://github.com/bruneo32/ANSI-Project/blob/main/C/doxygen/html/index.html)
 
 # Quick Example
 In ***C***
@@ -46,9 +49,9 @@ int main(int argc, char *argv[]){
 	for (int i=0; i < 256/4; i++) {
 		printf(ANSI_BK_RGB(0, 0, %i)" ", i*4);
 	}
-	printf(ANSI_RESET "\n");
 
-	printf(ANSI_RESET); // Always RESET at end
+
+	printf(ANSI_RESET "\n"); // Always RESET at end
 	return 0;
 }
 
