@@ -12,7 +12,7 @@ using ansi;
 ```
 
 # Documentation
-Check out the [**documentation** of the ANSI-Project for ***C#***](https://github.com/bruneo32/ANSI-Project/blob/main/C%23/doxygen/html/index.html)
+Check out the [**documentation** of the ANSI-Project for ***C#***](https://bruneo32.github.io/ANSI-Project/doc/cs/index.html)
 
 # Quick Example
 ```cs
