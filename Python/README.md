@@ -12,7 +12,7 @@ import ansi
 ```
 
 # Documentation
-Check out the [**documentation** of the ANSI-Project for ***Python***](https://github.com/bruneo32/ANSI-Project/blob/main/Python/ansi/doxygen/html/index.html)
+Check out the [**documentation** of the ANSI-Project for ***Python***](https://bruneo32.github.io/ANSI-Project/doc/python/index.html)
 
 # Quick Example
 ```py
