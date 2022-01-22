@@ -55,7 +55,7 @@ public class Example {
 		}
 
 
-		System.out.print(ANSI.RESET); // Always RESET at end
+		System.out.println(ANSI.RESET); // Always RESET at end
 
 	}
 }
