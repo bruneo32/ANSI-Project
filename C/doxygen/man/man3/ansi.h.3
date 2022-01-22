@@ -1,0 +1,858 @@
+.TH "ansi.h" 3 "Sat Jan 22 2022" "Version 1.0" "ANSI-Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ansi.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBANSI_ESC\fP   '\\x1B'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CSI\fP   '\\x9B'"
+.br
+.ti -1c
+.RI "#define \fBANSI_DSC\fP   '\\x90'"
+.br
+.ti -1c
+.RI "#define \fBANSI_OSC\fP   '\\x9D'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RESET\fP   \fBANSI_ESC\fP '[0m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BOLD\fP   \fBANSI_ESC\fP '[1m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_FAINT\fP   \fBANSI_ESC\fP '[2m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ITALIC\fP   \fBANSI_ESC\fP '[3m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_UNDER\fP   \fBANSI_ESC\fP '[4m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SBLINK\fP   \fBANSI_ESC\fP '[5m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RBLINK\fP   \fBANSI_ESC\fP '[6m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_REVERSE\fP   \fBANSI_ESC\fP '[7m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_HIDE\fP   \fBANSI_ESC\fP '[8m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_STRIKE\fP   \fBANSI_ESC\fP '[9m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_DEF_FONT\fP   \fBANSI_ESC\fP '[10m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_Franktur\fP   \fBANSI_ESC\fP '[20m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BOLD_OFF\fP   \fBANSI_ESC\fP '[21m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_HI_OFF\fP   \fBANSI_ESC\fP '[22m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ITALIC_OFF\fP   \fBANSI_ESC\fP '[23m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_UNDER_OFF\fP   \fBANSI_ESC\fP '[24m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BLINK_OFF\fP   \fBANSI_ESC\fP '[25m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_REVERSE_OFF\fP   \fBANSI_ESC\fP '[27m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_REVEAL\fP   \fBANSI_ESC\fP '[28m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_STRIKE_OFF\fP   \fBANSI_ESC\fP '[29m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BLACK\fP   \fBANSI_ESC\fP '[30m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RED\fP   \fBANSI_ESC\fP '[31m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_GREEN\fP   \fBANSI_ESC\fP '[32m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_YELLOW\fP   \fBANSI_ESC\fP '[33m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BLUE\fP   \fBANSI_ESC\fP '[34m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_PURPLE\fP   \fBANSI_ESC\fP '[35m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CYAN\fP   \fBANSI_ESC\fP '[36m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_WHITE\fP   \fBANSI_ESC\fP '[37m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_DEFAULT\fP   \fBANSI_ESC\fP '[39m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_BLACK\fP   \fBANSI_ESC\fP '[40m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_RED\fP   \fBANSI_ESC\fP '[41m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_GREEN\fP   \fBANSI_ESC\fP '[42m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_YELLOW\fP   \fBANSI_ESC\fP '[43m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_BLUE\fP   \fBANSI_ESC\fP '[44m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_PURPLE\fP   \fBANSI_ESC\fP '[45m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_CYAN\fP   \fBANSI_ESC\fP '[46m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_WHITE\fP   \fBANSI_ESC\fP '[47m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_DEFAULT\fP   \fBANSI_ESC\fP '[49m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BLACK_HI\fP   \fBANSI_ESC\fP '[90m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RED_HI\fP   \fBANSI_ESC\fP '[91m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_GREEN_HI\fP   \fBANSI_ESC\fP '[92m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_YELLOW_HI\fP   \fBANSI_ESC\fP '[93m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BLUE_HI\fP   \fBANSI_ESC\fP '[94m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_PURPLE_HI\fP   \fBANSI_ESC\fP '[95m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CYAN_HI\fP   \fBANSI_ESC\fP '[96m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_WHITE_HI\fP   \fBANSI_ESC\fP '[97m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_BLACK_HI\fP   \fBANSI_ESC\fP '[100m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_RED_HI\fP   \fBANSI_ESC\fP '[101m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_GREEN_HI\fP   \fBANSI_ESC\fP '[102m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_YELLOW_HI\fP   \fBANSI_ESC\fP '[103m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_BLUE_HI\fP   \fBANSI_ESC\fP '[104m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_PURPLE_HI\fP   \fBANSI_ESC\fP '[105m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_CYAN_HI\fP   \fBANSI_ESC\fP '[106m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_WHITE_HI\fP   \fBANSI_ESC\fP '[107m'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SGR\fP(str)   \fBANSI_ESC\fP '[' #str 'm'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RGB\fP(r,  g,  b)   \fBANSI_ESC\fP '[38;2;' #r ';' #g ';' #b 'm'"
+.br
+.ti -1c
+.RI "#define \fBANSI_BK_RGB\fP(r,  g,  b)   \fBANSI_ESC\fP '[48;2;' #r ';' #g ';' #b 'm'"
+.br
+.ti -1c
+.RI "#define \fBANSI_C0\fP   \fBANSI_ESC\fP '[1;1H'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUU1\fP   \fBANSI_ESC\fP '[1A'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUD1\fP   \fBANSI_ESC\fP '[1B'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUF1\fP   \fBANSI_ESC\fP '[1C'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUB1\fP   \fBANSI_ESC\fP '[1D'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CNL1\fP   \fBANSI_ESC\fP '[1E'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CPL1\fP   \fBANSI_ESC\fP '[1F'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SU1\fP   \fBANSI_ESC\fP '[1S'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SD1\fP   \fBANSI_ESC\fP '[1T'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ED0\fP   \fBANSI_ESC\fP '[0J'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ED1\fP   \fBANSI_ESC\fP '[1J'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ED2\fP   \fBANSI_ESC\fP '[2J'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ED3\fP   \fBANSI_ESC\fP '[3J'"
+.br
+.ti -1c
+.RI "#define \fBANSI_EL0\fP   \fBANSI_ESC\fP '[0K'"
+.br
+.ti -1c
+.RI "#define \fBANSI_EL1\fP   \fBANSI_ESC\fP '[1K'"
+.br
+.ti -1c
+.RI "#define \fBANSI_EL2\fP   \fBANSI_ESC\fP '[2K'"
+.br
+.ti -1c
+.RI "#define \fBANSI_AUX_PORT_ON\fP   \fBANSI_ESC\fP '[5i'"
+.br
+.ti -1c
+.RI "#define \fBANSI_AUX_PORT_OFF\fP   \fBANSI_ESC\fP '[4i'"
+.br
+.ti -1c
+.RI "#define \fBANSI_DSR\fP   \fBANSI_ESC\fP '[6n'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SCP\fP   \fBANSI_ESC\fP '[s'"
+.br
+.ti -1c
+.RI "#define \fBANSI_RCP\fP   \fBANSI_ESC\fP '[u'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUU\fP(n)   \fBANSI_ESC\fP '[' #n 'A'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUD\fP(n)   \fBANSI_ESC\fP '[' #n 'B'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUF\fP(n)   \fBANSI_ESC\fP '[' #n 'C'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUB\fP(n)   \fBANSI_ESC\fP '[' #n 'D'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CNL\fP(n)   \fBANSI_ESC\fP '[' #n 'E'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CPL\fP(n)   \fBANSI_ESC\fP '[' #n 'F'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CHA\fP(n)   \fBANSI_ESC\fP '[' #n 'G'"
+.br
+.ti -1c
+.RI "#define \fBANSI_CUP\fP(row,  col)   \fBANSI_ESC\fP '[' #row ';' #col 'H'"
+.br
+.ti -1c
+.RI "#define \fBANSI_ED\fP(n)   \fBANSI_ESC\fP '[' #n 'J'"
+.br
+.ti -1c
+.RI "#define \fBANSI_EL\fP(n)   \fBANSI_ESC\fP '[' #n 'K'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SU\fP(n)   \fBANSI_ESC\fP '[' #n 'S'"
+.br
+.ti -1c
+.RI "#define \fBANSI_SD\fP(n)   \fBANSI_ESC\fP '[' #n 'T'"
+.br
+.ti -1c
+.RI "#define \fBANSI_HVP\fP(row,  col)   \fBANSI_ESC\fP '[' #row ';' #col 'f'"
+.br
+.ti -1c
+.RI "#define \fBANSI_custom\fP(str)   \fBANSI_ESC\fP '[' #str"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ANSI_AUX_PORT_OFF   \fBANSI_ESC\fP '[4i'"
+Enable aux serial port usually for local serial printer
+.PP
+\fBReturns\fP
+.RS 4
+ESC [4i 
+.RE
+.PP
+
+.SS "#define ANSI_AUX_PORT_ON   \fBANSI_ESC\fP '[5i'"
+Enable aux serial port usually for local serial printer
+.PP
+\fBReturns\fP
+.RS 4
+ESC [5i 
+.RE
+.PP
+
+.SS "#define ANSI_BK_BLACK   \fBANSI_ESC\fP '[40m'"
+
+.SS "#define ANSI_BK_BLACK_HI   \fBANSI_ESC\fP '[100m'"
+
+.SS "#define ANSI_BK_BLUE   \fBANSI_ESC\fP '[44m'"
+
+.SS "#define ANSI_BK_BLUE_HI   \fBANSI_ESC\fP '[104m'"
+
+.SS "#define ANSI_BK_CYAN   \fBANSI_ESC\fP '[46m'"
+
+.SS "#define ANSI_BK_CYAN_HI   \fBANSI_ESC\fP '[106m'"
+
+.SS "#define ANSI_BK_DEFAULT   \fBANSI_ESC\fP '[49m'"
+
+.SS "#define ANSI_BK_GREEN   \fBANSI_ESC\fP '[42m'"
+
+.SS "#define ANSI_BK_GREEN_HI   \fBANSI_ESC\fP '[102m'"
+
+.SS "#define ANSI_BK_PURPLE   \fBANSI_ESC\fP '[45m'"
+
+.SS "#define ANSI_BK_PURPLE_HI   \fBANSI_ESC\fP '[105m'"
+
+.SS "#define ANSI_BK_RED   \fBANSI_ESC\fP '[41m'"
+
+.SS "#define ANSI_BK_RED_HI   \fBANSI_ESC\fP '[101m'"
+
+.SS "#define ANSI_BK_RGB(r, g, b)   \fBANSI_ESC\fP '[48;2;' #r ';' #g ';' #b 'm'"
+Specify the Background color in RGB
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red value 
+.br
+\fIg\fP Green value 
+.br
+\fIb\fP Blue value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_BK_WHITE   \fBANSI_ESC\fP '[47m'"
+
+.SS "#define ANSI_BK_WHITE_HI   \fBANSI_ESC\fP '[107m'"
+
+.SS "#define ANSI_BK_YELLOW   \fBANSI_ESC\fP '[43m'"
+
+.SS "#define ANSI_BK_YELLOW_HI   \fBANSI_ESC\fP '[103m'"
+
+.SS "#define ANSI_BLACK   \fBANSI_ESC\fP '[30m'"
+
+.SS "#define ANSI_BLACK_HI   \fBANSI_ESC\fP '[90m'"
+
+.SS "#define ANSI_BLINK_OFF   \fBANSI_ESC\fP '[25m'"
+
+.SS "#define ANSI_BLUE   \fBANSI_ESC\fP '[34m'"
+
+.SS "#define ANSI_BLUE_HI   \fBANSI_ESC\fP '[94m'"
+
+.SS "#define ANSI_BOLD   \fBANSI_ESC\fP '[1m'"
+
+.SS "#define ANSI_BOLD_OFF   \fBANSI_ESC\fP '[21m'"
+
+.SS "#define ANSI_C0   \fBANSI_ESC\fP '[1;1H'"
+Place the cursor in top-left corner Same as CUP(1,1)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1;1H 
+.RE
+.PP
+
+.SS "#define ANSI_CHA(n)   \fBANSI_ESC\fP '[' #n 'G'"
+Moves the cursor to column n (default 1)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CNL(n)   \fBANSI_ESC\fP '[' #n 'E'"
+Moves cursor to beginning of the line n (default 1) lines down\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CNL1   \fBANSI_ESC\fP '[1E'"
+Moves cursor to beginning of the next line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1E 
+.RE
+.PP
+
+.SS "#define ANSI_CPL(n)   \fBANSI_ESC\fP '[' #n 'F'"
+Moves cursor to beginning of the line n (default 1) lines up\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CPL1   \fBANSI_ESC\fP '[1F'"
+Moves cursor to beginning of the previous line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1F 
+.RE
+.PP
+
+.SS "#define ANSI_CSI   '\\x9B'"
+
+.SS "#define ANSI_CUB(n)   \fBANSI_ESC\fP '[' #n 'D'"
+Moves the cursor n (default 1) cells backwards
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CUB1   \fBANSI_ESC\fP '[1D'"
+Move the cursor 1 cell backwards
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1D 
+.RE
+.PP
+
+.SS "#define ANSI_CUD(n)   \fBANSI_ESC\fP '[' #n 'B'"
+Moves the cursor n (default 1) cells down
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CUD1   \fBANSI_ESC\fP '[1B'"
+Move the cursor 1 row down
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1B 
+.RE
+.PP
+
+.SS "#define ANSI_CUF(n)   \fBANSI_ESC\fP '[' #n 'C'"
+Moves the cursor n (default 1) cells forwards
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CUF1   \fBANSI_ESC\fP '[1C'"
+Move the cursor 1 cell forwards
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1C 
+.RE
+.PP
+
+.SS "#define ANSI_CUP(row, col)   \fBANSI_ESC\fP '[' #row ';' #col 'H'"
+Moves the cursor to [row, column]\&. The values are 1-based\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP 
+.br
+\fIcol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_custom(str)   \fBANSI_ESC\fP '[' #str"
+Returns a custom ANSI ESCAPE SEQUENCE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ESC '[' str 
+.RE
+.PP
+
+.SS "#define ANSI_CUU(n)   \fBANSI_ESC\fP '[' #n 'A'"
+Moves the cursor n (default 1) cells up
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_CUU1   \fBANSI_ESC\fP '[1A'"
+Move the cursor 1 row up
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1A 
+.RE
+.PP
+
+.SS "#define ANSI_CYAN   \fBANSI_ESC\fP '[36m'"
+
+.SS "#define ANSI_CYAN_HI   \fBANSI_ESC\fP '[96m'"
+
+.SS "#define ANSI_DEF_FONT   \fBANSI_ESC\fP '[10m'"
+Default font 
+.SS "#define ANSI_DEFAULT   \fBANSI_ESC\fP '[39m'"
+
+.SS "#define ANSI_DSC   '\\x90'"
+
+.SS "#define ANSI_DSR   \fBANSI_ESC\fP '[6n'"
+Reports the cursor position (CPR) by transmitting ESC[n;mR, where n is the row and m is the column\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [6n 
+.RE
+.PP
+
+.SS "#define ANSI_ED(n)   \fBANSI_ESC\fP '[' #n 'J'"
+Clears part of the screen\&. If n is 0 (or missing), clear from cursor to end of screen\&. If n is 1, clear from cursor to beginning of the screen\&. If n is 2, clear entire screen (and moves cursor to upper left on DOS ANSI\&.SYS)\&. If n is 3, clear entire screen and delete all lines saved in the scrollback buffer (this feature was added for xterm and is supported by other terminal applications)\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_ED0   \fBANSI_ESC\fP '[0J'"
+Clear from cursor to end of screen\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [0J 
+.RE
+.PP
+
+.SS "#define ANSI_ED1   \fBANSI_ESC\fP '[1J'"
+Clear from cursor to beginning of the screen
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1J 
+.RE
+.PP
+
+.SS "#define ANSI_ED2   \fBANSI_ESC\fP '[2J'"
+Clear entire screen (and moves cursor to upper left on DOS ANSI\&.SYS)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [2J 
+.RE
+.PP
+
+.SS "#define ANSI_ED3   \fBANSI_ESC\fP '[3J'"
+Clear entire screen and delete all lines saved in the scrollback buffer (this feature was added for xterm and is supported by other terminal applications)
+.PP
+\fBReturns\fP
+.RS 4
+ESC [3J 
+.RE
+.PP
+
+.SS "#define ANSI_EL(n)   \fBANSI_ESC\fP '[' #n 'K'"
+Erases part of the line If n is 0 (or missing), clear from cursor to the end of the line If n is 1, clear from cursor to beginning of the line If n is 2, clear entire line\&. Cursor position does not change\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_EL0   \fBANSI_ESC\fP '[0K'"
+Clear from cursor to the end of the line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [0K 
+.RE
+.PP
+
+.SS "#define ANSI_EL1   \fBANSI_ESC\fP '[1K'"
+Clear from cursor to beginning of the line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1K 
+.RE
+.PP
+
+.SS "#define ANSI_EL2   \fBANSI_ESC\fP '[2K'"
+Clear entire line\&. Cursor position does not change\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [2K 
+.RE
+.PP
+
+.SS "#define ANSI_ESC   '\\x1B'"
+
+.SS "#define ANSI_FAINT   \fBANSI_ESC\fP '[2m'"
+
+.SS "#define ANSI_Franktur   \fBANSI_ESC\fP '[20m'"
+Rarely supported font 
+.SS "#define ANSI_GREEN   \fBANSI_ESC\fP '[32m'"
+
+.SS "#define ANSI_GREEN_HI   \fBANSI_ESC\fP '[92m'"
+
+.SS "#define ANSI_HI_OFF   \fBANSI_ESC\fP '[22m'"
+
+.SS "#define ANSI_HIDE   \fBANSI_ESC\fP '[8m'"
+
+.SS "#define ANSI_HVP(row, col)   \fBANSI_ESC\fP '[' #row ';' #col 'f'"
+Same as CUP, but counts as a format effector function (like CR or LF) rather than an editor function (like CUD or CNL) This can lead to different handling in certain terminal modes
+.PP
+\fBParameters\fP
+.RS 4
+\fIrow\fP 
+.br
+\fIcol\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_ITALIC   \fBANSI_ESC\fP '[3m'"
+
+.SS "#define ANSI_ITALIC_OFF   \fBANSI_ESC\fP '[23m'"
+
+.SS "#define ANSI_OSC   '\\x9D'"
+
+.SS "#define ANSI_PURPLE   \fBANSI_ESC\fP '[35m'"
+
+.SS "#define ANSI_PURPLE_HI   \fBANSI_ESC\fP '[95m'"
+
+.SS "#define ANSI_RBLINK   \fBANSI_ESC\fP '[6m'"
+
+.SS "#define ANSI_RCP   \fBANSI_ESC\fP '[u'"
+Restores the cursor position/state in SCO console mode\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [u 
+.RE
+.PP
+
+.SS "#define ANSI_RED   \fBANSI_ESC\fP '[31m'"
+
+.SS "#define ANSI_RED_HI   \fBANSI_ESC\fP '[91m'"
+
+.SS "#define ANSI_RESET   \fBANSI_ESC\fP '[0m'"
+
+.SS "#define ANSI_REVEAL   \fBANSI_ESC\fP '[28m'"
+
+.SS "#define ANSI_REVERSE   \fBANSI_ESC\fP '[7m'"
+
+.SS "#define ANSI_REVERSE_OFF   \fBANSI_ESC\fP '[27m'"
+
+.SS "#define ANSI_RGB(r, g, b)   \fBANSI_ESC\fP '[38;2;' #r ';' #g ';' #b 'm'"
+Specify the Foreground color in RGB
+.PP
+\fBParameters\fP
+.RS 4
+\fIr\fP Red value 
+.br
+\fIg\fP Green value 
+.br
+\fIb\fP Blue value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_SBLINK   \fBANSI_ESC\fP '[5m'"
+
+.SS "#define ANSI_SCP   \fBANSI_ESC\fP '[s'"
+Saves the cursor position/state in SCO console mode In vertical split screen mode, instead used to set (as CSI n ; n s) or reset left and right margins\&.
+.PP
+\fBReturns\fP
+.RS 4
+ESC [s 
+.RE
+.PP
+
+.SS "#define ANSI_SD(n)   \fBANSI_ESC\fP '[' #n 'T'"
+Scroll whole page down by n (default 1) lines\&. New lines are added at the top\&. (not ANSI\&.SYS)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_SD1   \fBANSI_ESC\fP '[1T'"
+Scroll whole page down by 1 line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1T 
+.RE
+.PP
+
+.SS "#define ANSI_SGR(str)   \fBANSI_ESC\fP '[' #str 'm'"
+Sets colors and style of the characters following this code Example: ANSI_SGR(40;91) makes RED_HI over BK_BLACK
+.PP
+\fBParameters\fP
+.RS 4
+\fIstr\fP 
+.RE
+.PP
+
+.SS "#define ANSI_STRIKE   \fBANSI_ESC\fP '[9m'"
+
+.SS "#define ANSI_STRIKE_OFF   \fBANSI_ESC\fP '[29m'"
+
+.SS "#define ANSI_SU(n)   \fBANSI_ESC\fP '[' #n 'S'"
+Scroll whole page up by n (default 1) lines\&. New lines are added at the bottom\&. (not ANSI\&.SYS)
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String to be printed 
+.RE
+.PP
+
+.SS "#define ANSI_SU1   \fBANSI_ESC\fP '[1S'"
+Scroll whole page up by 1 line
+.PP
+\fBReturns\fP
+.RS 4
+ESC [1S 
+.RE
+.PP
+
+.SS "#define ANSI_UNDER   \fBANSI_ESC\fP '[4m'"
+
+.SS "#define ANSI_UNDER_OFF   \fBANSI_ESC\fP '[24m'"
+
+.SS "#define ANSI_WHITE   \fBANSI_ESC\fP '[37m'"
+
+.SS "#define ANSI_WHITE_HI   \fBANSI_ESC\fP '[97m'"
+
+.SS "#define ANSI_YELLOW   \fBANSI_ESC\fP '[33m'"
+
+.SS "#define ANSI_YELLOW_HI   \fBANSI_ESC\fP '[93m'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ANSI-Project from the source code\&.
