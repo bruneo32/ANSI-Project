@@ -12,7 +12,7 @@ Download [ansi.h](https://github.com/bruneo32/ANSI-Project/blob/main/C/ansi.h) a
 It only contains macros, you can include it in `C++` without `extern`
 
 # Documentation
-Check out the [**documentation** of the ANSI-Project for ***C/C++***](https://github.com/bruneo32/ANSI-Project/blob/main/C/doxygen/html/index.html)
+Check out the [**documentation** of the ANSI-Project for ***C/C++***](https://bruneo32.github.io/ANSI-Project/doc/c/index.html)
 
 # Quick Example
 In ***C***
