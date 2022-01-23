@@ -15,10 +15,6 @@
 #ifndef _ANSI_H
 #define _ANSI_H
 
-#ifndef _STDIO_H
-	#include <stdio.h>
-#endif
-
 #ifndef ANSI_ESC
 	#define ANSI_ESC	"\x1B"
 #endif
